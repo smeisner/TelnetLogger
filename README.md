@@ -1,4 +1,4 @@
-# TelnetLogger (ported from ParticleWebLog by kevinh@geeksville.com)
+# TelnetLogger (ported from ParticleWebLog by kevinh _at_ geeksville.com)
 
 A Particle library for logging via a telnet client and publish().
 
@@ -18,7 +18,7 @@ but also to the telnet client. This will provide realtime monitoring of activity
 Also, if you enable it, it will also publish to the Particle.io web
 console. To enable this;
 
-'''#define PARTICLE_BENCH'''
+```#define PARTICLE_BENCH```
 
 ## Usage
 
@@ -82,7 +82,7 @@ code change requests against the original Github project. Anything related to th
 of this library can be directed to steve@meisners.net .
 
 ## LICENSE
-Copyright 2022 steve@meisners.net (newer Telnet based version)
+Copyright 2022 steve@meisners.net (newer Telnet based version)  
 Copyright 2019 kevinh@geeksville.com (initial code)
 
 Licensed under the MIT license
