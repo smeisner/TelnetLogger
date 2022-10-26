@@ -56,12 +56,18 @@ microcontroller completely locally...only enabling connection to PArticle if you
 I wanted everything to be locally on the wifi, so I created this library and telnet into
 my device (a Particle Argon at the time of this writing).
 
+Whenever a new TelnetLogger object is created, it is good to be aware that a sizable
+buffer is allocated for the ring buffer (default 2K bytes). Also good to know is
+that the primary object is deleted and recreated everytime the log level is changed.
+This is due to not being able to figure out how to modify this value ... there's
+probably a way to do this. See the example code to understand how to change the log level.
+
 Limitations:
 
 * A circular ring buffer is used to store the activity log. The default size of the
 ring is ~2k bytes. If a message that is larger than that is written into the 
 ring, it will quietly fail.
-* No connection to the PArticle made is established by default. Only if you compile
+* No connection to the Particle made is established by default. Only if you compile
  with PARTICLE_BENCH defined will the library attempt to performa Particle publish.
  This assumes your code will perform the steps neccessary to establish a link to Particle
  and your device is properly registered with Particle.
